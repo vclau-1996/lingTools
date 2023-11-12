@@ -1,6 +1,7 @@
 /** 备注模板 */
-import { memo, useState, useMemo } from "react";
-import { Select } from "antd";
+import { memo, useState, useMemo, useCallback } from "react";
+import { Select, message } from "antd";
+import copy from "copy-to-clipboard";
 import { monthOptions, fontOptions, monthMap, fontMap } from "./dataSource";
 
 const RemarkTemplate = () => {
@@ -15,6 +16,16 @@ const RemarkTemplate = () => {
 
   /** 字体颜色 */
   const fontColor = useMemo(() => monthMap.get(month)?.color ?? "", [month]);
+
+  /** 一键复制备注 */
+  const copyRemark = useCallback(() => {
+    const text = `素材名：${materialName}\n字体：${fontName}\n字体颜色：${fontColor}`;
+    if (copy(text, { format: "text/plain" })) {
+      message.success("复制成功");
+    } else {
+      message.error("复制失败");
+    }
+  }, [materialName, fontName, fontColor]);
 
   return (
     <div className="text-start">
@@ -41,7 +52,12 @@ const RemarkTemplate = () => {
         ></Select>
       </div>
       <div>
-        素材名：{materialName} 字体：{fontName} 字体颜色：{fontColor}
+        素材名：{materialName} <br />
+        字体：{fontName} <br />
+        字体颜色：{fontColor}
+      </div>
+      <div className="text-blue-500 cursor-pointer mt-2" onClick={copyRemark}>
+        一键复制
       </div>
     </div>
   );

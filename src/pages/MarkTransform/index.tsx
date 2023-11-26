@@ -65,7 +65,8 @@ const MarkTransform = () => {
       <div className="mb-6 flex items-center">
         自定义符号：
         <Input
-          className="w-[150px]"
+          className="w-[50px]"
+          maxLength={1}
           onChange={(e) => {
             setSpecialMark(e.target.value);
           }}

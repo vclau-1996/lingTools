@@ -37,7 +37,7 @@ const MarkTransform = () => {
     if (!value) return "";
     const result = value
       .replace(regExp, TARGET_MARK)
-      .replace(/|+/g, TARGET_MARK);
+      .replace(/\|+/g, TARGET_MARK);
 
     return result;
   }, [value, regExp]);

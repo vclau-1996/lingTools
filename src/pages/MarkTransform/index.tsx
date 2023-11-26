@@ -35,7 +35,9 @@ const MarkTransform = () => {
   /** 根据正则对文本进行格式化 */
   const formateValue = useMemo(() => {
     if (!value) return "";
-    const result = value.replace(regExp, TARGET_MARK).replace(/-+/g, "-");
+    const result = value
+      .replace(regExp, TARGET_MARK)
+      .replace(/|+/g, TARGET_MARK);
 
     return result;
   }, [value, regExp]);

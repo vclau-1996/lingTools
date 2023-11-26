@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/lingTools/static/css/main.b375ddec.css",
-    "main.js": "/lingTools/static/js/main.eab66a67.js",
+    "main.css": "/lingTools/static/css/main.dfcebd9a.css",
+    "main.js": "/lingTools/static/js/main.820d021f.js",
     "static/js/853.3075c2b7.chunk.js": "/lingTools/static/js/853.3075c2b7.chunk.js",
     "index.html": "/lingTools/index.html",
-    "main.b375ddec.css.map": "/lingTools/static/css/main.b375ddec.css.map",
-    "main.eab66a67.js.map": "/lingTools/static/js/main.eab66a67.js.map",
+    "main.dfcebd9a.css.map": "/lingTools/static/css/main.dfcebd9a.css.map",
+    "main.820d021f.js.map": "/lingTools/static/js/main.820d021f.js.map",
     "853.3075c2b7.chunk.js.map": "/lingTools/static/js/853.3075c2b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b375ddec.css",
-    "static/js/main.eab66a67.js"
+    "static/css/main.dfcebd9a.css",
+    "static/js/main.820d021f.js"
   ]
 }
